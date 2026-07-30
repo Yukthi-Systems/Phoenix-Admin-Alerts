@@ -1,0 +1,24 @@
+services:
+  phoenix-admin-alerts-db:
+    image: postgres:16-alpine
+    container_name: phoenix-admin-alerts-db
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:5439:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  phoenix-admin-alerts:
+    image: rjyspl/phoenix-admin-alerts:latest
+    container_name: phoenix-admin-alerts
+    restart: always
+    env_file:
+      - .env
+
+    depends_on:
+      - phoenix-admin-alerts-db
+
+volumes:
+  pgdata:
