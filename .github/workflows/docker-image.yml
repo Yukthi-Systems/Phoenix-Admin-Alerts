@@ -12,7 +12,7 @@ on:
 
 jobs:
   docker:
-    runs-on: Het-8v-16G
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
