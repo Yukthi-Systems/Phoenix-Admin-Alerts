@@ -73,7 +73,7 @@ The image is configured entirely through environment variables — no config fil
 
 | Variable | Description | Example |
 | :--- | :--- | :--- |
-| `DB_HOST` / `DB_PORT` / `DB_DATABASE` / `DB_USERNAME` / `DB_PASSWORD` | Primary mail service database connection | `localhost`, `5432`, `mail_database`, ... |
+| `DB_HOST` / `DB_PORT` / `DB_DATABASE` / `DB_USERNAME` / `DB_PASSWORD` / `DB_SSLMODE` | Primary mail service database connection | `localhost`, `5432`, `mail_database`, ..., `disable` |
 | `QUOTA_DB_HOST` / `QUOTA_DB_PORT` / `QUOTA_DB_NAME` / `QUOTA_DB_USER` / `QUOTA_DB_PASSWORD` | Alert-tracking (quota state) database connection | `phoenix-admin-alerts-db`, `5432`, `quota_db`, ... |
 | `QUOTA_THRESHOLDS` | Comma-separated organization quota percentage alerts | `80,85,95` |
 | `RABBITMQ_URL` | AMQP connection string used to publish alert emails | `amqp://user:pass@host:5672/` |

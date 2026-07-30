@@ -90,6 +90,7 @@ cp .env-example .env
 | `DB_DATABASE` | Database name for mail service | `mail_database` |
 | `DB_USERNAME` | Username for mail service | `admin_user` |
 | `DB_PASSWORD` | Password for mail service | `******` |
+| `DB_SSLMODE` | SSL mode for the mail service database connection | `disable` |
 | **Quota DB (Alert Tracking)** | | |
 | `QUOTA_DB_HOST` | Hostname of the quota tracking database | `localhost` / `phoenix-admin-alerts-db` |
 | `QUOTA_DB_PORT` | Port number of the quota tracking database | `5439` / `5432` |

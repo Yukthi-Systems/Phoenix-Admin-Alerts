@@ -97,8 +97,9 @@ func New() Service {
 		username := os.Getenv("DB_USERNAME")
 		port := os.Getenv("DB_PORT")
 		host := os.Getenv("DB_HOST")
+		sslmode := os.Getenv("DB_SSLMODE")
 
-		connStr := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", username, password, host, port, database)
+		connStr := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=%s", username, password, host, port, database, sslmode)
 		// Masking password for logs
 		slog.Info("connecting to database", "host", host, "port", port, "database", database)
 
